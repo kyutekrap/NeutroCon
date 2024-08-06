@@ -1,0 +1,12 @@
+from setuptools import setup
+
+
+setup(
+    name='NeutroCon',
+    version='0.0.1',
+    packages=['NeutroCon'],
+    url='https://github.com/kyutekrap/NeutroCon',
+    install_requires=[
+        'Link @ git+https://github.com/kyutekrap/Link@main'
+    ]
+)
