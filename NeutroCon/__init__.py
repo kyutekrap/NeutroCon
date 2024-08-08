@@ -17,3 +17,25 @@ from .RollingSum import RollingSum
 from .RollingProduct import RollingProduct
 from .RollingQuotient import RollingQuotient
 from .WeightedAverage import WeightedAverage
+
+__all__ = [
+    Add,
+    Autocorrelate,
+    Average,
+    CorrelationCoefficient,
+    Covariance,
+    Divide,
+    HermitePolynomial,
+    Inverse,
+    LaguerrePolynomial,
+    LegendrePolynomial,
+    Multiply,
+    Normalize,
+    Orthonormalize,
+    Subtract,
+    RollingSum,
+    RollingDifference,
+    RollingQuotient,
+    RollingProduct,
+    WeightedAverage
+]
