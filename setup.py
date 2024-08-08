@@ -7,6 +7,7 @@ setup(
     packages=['NeutroCon'],
     url='https://github.com/kyutekrap/NeutroCon',
     install_requires=[
-        'Link @ git+https://github.com/kyutekrap/Link@main'
+        'Link @ git+https://github.com/kyutekrap/Link@main',
+        'numpy'
     ]
 )
