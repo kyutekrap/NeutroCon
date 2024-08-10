@@ -9,7 +9,7 @@ def LaguerrePolynomial(context: np.ndarray, order: int = 2) -> np.ndarray:
     Compute Laguerre polynomials for a given order element-wise.
 
     Args:
-    context (np.ndarray): Input values.
+    context (np.ndarray): A 2D NumPy array.
     order (int): Order of the Laguerre polynomials.
 
     Returns:

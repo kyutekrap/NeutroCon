@@ -4,7 +4,7 @@ import numpy as np
 
 
 @register_step(Debug=Debug)
-def Inverse(context: np.array) -> np.array:
+def Inverse(context: np.ndarray) -> np.ndarray:
     """
     Get the inverse using the Gauss-Jordan elimination method.
 

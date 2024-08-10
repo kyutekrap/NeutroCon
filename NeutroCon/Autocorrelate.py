@@ -4,15 +4,15 @@ import numpy as np
 
 
 @register_step(Debug=Debug)
-def Autocorrelate(context: np.array) -> np.array:
+def Autocorrelate(context: np.ndarray) -> np.ndarray:
     """
     Compute the autocorrelation of a 2D matrix.
 
     Args:
-    context (np.array): Input 2D matrix.
+    context (np.ndarray): Input 2D matrix.
 
     Returns:
-    np.array: Autocorrelation matrix.
+    np.ndarray: Autocorrelation matrix.
     """
     rows, cols = context.shape
     matrix_mean = np.mean(context)

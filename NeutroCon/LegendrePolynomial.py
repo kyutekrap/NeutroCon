@@ -9,7 +9,7 @@ def LegendrePolynomial(context: np.ndarray, order: int = 2) -> np.ndarray:
     Compute Legendre polynomials for a given order element-wise.
 
     Args:
-    context (np.ndarray): Input values.
+    context (np.ndarray): A 2D NumPy array.
     order (int): Order of the Legendre polynomials.
 
     Returns:
