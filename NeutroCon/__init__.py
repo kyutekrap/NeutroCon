@@ -17,6 +17,7 @@ from .RollingSum import RollingSum
 from .RollingProduct import RollingProduct
 from .RollingQuotient import RollingQuotient
 from .WeightedAverage import WeightedAverage
+from .Integral import Integral
 
 __all__ = [
     Add,
@@ -26,6 +27,7 @@ __all__ = [
     Covariance,
     Divide,
     HermitePolynomial,
+    Integral,
     Inverse,
     LaguerrePolynomial,
     LegendrePolynomial,

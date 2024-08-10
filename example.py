@@ -12,7 +12,7 @@ stream_handler.setFormatter(formatter)
 logger.addHandler(stream_handler)
 
 # Create a matrix context
-context = np.random.rand(30, 3)
+context = np.random.rand(3, 3)
 
 
 class ColumnIndex(IntEnum):
@@ -61,7 +61,9 @@ def example_flow():
         # CreateStep.RollingSum(context[:, ColumnIndex.FIRST], period=3),
         # Debugger.log(GetStep("RollingSum")),
         # CreateStep.RollingDifference(context[:, ColumnIndex.FIRST], period=2),
-        # Debugger.log(GetStep("RollingDifference"))
+        # Debugger.log(GetStep("RollingDifference")),
+        # CreateStep.Integral(context, direction=0),
+        # Debugger.log(GetStep("Integral"))
     ])
 
 

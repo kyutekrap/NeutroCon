@@ -25,5 +25,5 @@ def Divide(context: np.array, direction: Literal[0, 1] = 0) -> np.array:
         for i in range(1, context.shape[1]):
             result /= context[:, i]
     else:
-        raise ValueError("Direction must be 0 (columns) or 1 (rows).")
+        raise ValueError("Direction must be 0 or 1.")
     return result
