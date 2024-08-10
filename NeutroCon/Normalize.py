@@ -1,12 +1,12 @@
 import numpy as np
 from Link import register_step
-from config import Debug
+from ._config import Debug
 
 
 @register_step(Debug=Debug)
 def Normalize(context: np.array) -> np.array:
     """
-    Normalize a 2d array into unit vector
+    Normalize a 2d array into unit vector.
 
     Args:
     context (np.array): A 2D NumPy array.

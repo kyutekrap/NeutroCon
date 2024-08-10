@@ -1,5 +1,5 @@
 from Link import register_step
-from config import Debug
+from ._config import Debug
 import numpy as np
 
 

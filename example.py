@@ -1,9 +1,8 @@
 from Link import *
-from config import Debug
 import logging
-import NeutroCon
 import numpy as np
 from enum import IntEnum
+import NeutroCon
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -13,7 +12,7 @@ stream_handler.setFormatter(formatter)
 logger.addHandler(stream_handler)
 
 # Create a matrix context
-context = np.random.rand(3, 4)
+context = np.random.rand(30, 3)
 
 
 class ColumnIndex(IntEnum):
@@ -22,7 +21,7 @@ class ColumnIndex(IntEnum):
     THIRD = 2
 
 
-@register_flow(Debug=Debug)
+@register_flow(Debug=True)
 def example_flow():
     CreateFlow([
         CreateStep.Add(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
@@ -33,13 +32,13 @@ def example_flow():
         # Debugger.log(GetStep("Multiply")),
         # CreateStep.Subtract(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
         # Debugger.log(GetStep("Subtract")),
-        # CreateStep.Average(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
+        # CreateStep.Average(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=1),
         # Debugger.log(GetStep("Average")),
-        # CreateStep.Normalize(context),
+        # CreateStep.Normalize(context[:, [ColumnIndex.FIRST]]),
         # Debugger.log(GetStep("Normalize")),
         # CreateStep.WeightedAverage(context[:, ColumnIndex.FIRST]),
         # Debugger.log(GetStep("WeightedAverage")),
-        # CreateStep.HermitePolynomial(context, order=2),
+        # CreateStep.HermitePolynomial(context[:, [ColumnIndex.FIRST]], order=2),
         # Debugger.log(GetStep("HermitePolynomial")),
         # CreateStep.LaguerrePolynomial(context, order=2),
         # Debugger.log(GetStep("LaguerrePolynomial")),
@@ -49,7 +48,7 @@ def example_flow():
         # Debugger.log(GetStep("Inverse")),
         # CreateStep.Orthonormalize(context),
         # Debugger.log(GetStep("Orthonormalize")),
-        # CreateStep.Autocorrelate(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]]),
+        # CreateStep.Autocorrelate(context[:, [ColumnIndex.FIRST]]),
         # Debugger.log(GetStep("Autocorrelate")),
         # CreateStep.Covariance(context, direction=0),
         # Debugger.log(GetStep("Covariance")),
@@ -61,7 +60,7 @@ def example_flow():
         # Debugger.log(GetStep("RollingProduct")),
         # CreateStep.RollingSum(context[:, ColumnIndex.FIRST], period=3),
         # Debugger.log(GetStep("RollingSum")),
-        # CreateStep.RollingDifference(context[:, ColumnIndex.FIRST], period=3),
+        # CreateStep.RollingDifference(context[:, ColumnIndex.FIRST], period=2),
         # Debugger.log(GetStep("RollingDifference"))
     ])
 

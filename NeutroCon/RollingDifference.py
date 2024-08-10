@@ -1,6 +1,6 @@
 import numpy as np
 from Link import register_step
-from config import Debug
+from ._config import Debug
 
 
 @register_step(Debug=Debug)

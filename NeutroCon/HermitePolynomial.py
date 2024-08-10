@@ -1,5 +1,5 @@
 from Link import register_step
-from config import Debug
+from ._config import Debug
 import numpy as np
 
 
@@ -9,7 +9,7 @@ def HermitePolynomial(context: np.ndarray, order: int = 2) -> np.ndarray:
     Compute Hermite polynomials for a given order element-wise.
 
     Args:
-    context (np.ndarray): Input values.
+    context (np.ndarray): A 2D NumPy array.
     order (int): Order of the Hermite polynomials.
 
     Returns:
