@@ -21,6 +21,9 @@ from .Integral import Integral
 from .EigenvalueEigenvector import EigenvalueEigenvector
 from .KLEigenvector import KLEigenvector
 from .LeastSquare import LeastSquare
+from .GaussElimination import GaussElimination
+from .LowPassFilter import LowPassFilter
+from .MinmaxNormalize import MinmaxNormalize
 
 __all__ = [
     Add,
@@ -45,5 +48,8 @@ __all__ = [
     WeightedAverage,
     EigenvalueEigenvector,
     KLEigenvector,
-    LeastSquare
+    LeastSquare,
+    GaussElimination,
+    LowPassFilter,
+    MinmaxNormalize,
 ]

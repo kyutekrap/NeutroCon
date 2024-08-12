@@ -70,6 +70,12 @@ def example_flow():
         # Debugger.log(GetStep("KLEigenvector")),
         # CreateStep.LeastSquare(context),
         # Debugger.log(GetStep("LeastSquare")),
+        # CreateStep.GaussElimination(context),
+        # Debugger.log(GetStep("GaussElimination")),
+        # CreateStep.LowPassFilter(context),
+        # Debugger.log(GetStep("LowPassFilter")),
+        # CreateStep.MinmaxNormalize(context, direction=0),
+        # Debugger.log(GetStep("MinmaxNormalize")),
     ])
 
 
