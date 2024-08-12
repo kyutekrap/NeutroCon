@@ -21,7 +21,7 @@ class ColumnIndex(IntEnum):
     THIRD = 2
 
 
-@register_flow(Debug=True)
+@register_flow(Debug=False)
 def example_flow():
     CreateFlow([
         CreateStep.Add(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
@@ -36,7 +36,7 @@ def example_flow():
         # Debugger.log(GetStep("Average")),
         # CreateStep.Normalize(context[:, [ColumnIndex.FIRST]]),
         # Debugger.log(GetStep("Normalize")),
-        # CreateStep.WeightedAverage(context[:, ColumnIndex.FIRST]),
+        # CreateStep.WeightedAverage(context),
         # Debugger.log(GetStep("WeightedAverage")),
         # CreateStep.HermitePolynomial(context[:, [ColumnIndex.FIRST]], order=2),
         # Debugger.log(GetStep("HermitePolynomial")),
@@ -63,7 +63,13 @@ def example_flow():
         # CreateStep.RollingDifference(context[:, ColumnIndex.FIRST], period=2),
         # Debugger.log(GetStep("RollingDifference")),
         # CreateStep.Integral(context, direction=0),
-        # Debugger.log(GetStep("Integral"))
+        # Debugger.log(GetStep("Integral")),
+        # CreateStep.EigenvalueEigenvector(context),
+        # Debugger.log(GetStep("EigenvalueEigenvector")),
+        # CreateStep.KLEigenvector(context),
+        # Debugger.log(GetStep("KLEigenvector")),
+        # CreateStep.LeastSquare(context),
+        # Debugger.log(GetStep("LeastSquare")),
     ])
 
 

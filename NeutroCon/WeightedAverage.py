@@ -4,18 +4,26 @@ from ._config import Debug
 
 
 @register_step(Debug=Debug)
-def WeightedAverage(arr: np.ndarray) -> float:
+def WeightedAverage(context: np.ndarray, direction: int = 0) -> np.ndarray:
     """
-    Calculate the weighted average of a NumPy array where weights increase linearly from 1.
+    Calculate the weighted average of a 2D NumPy array along a specified axis.
+    The weights increase linearly from 1 along the specified axis.
 
     Args:
-    arr (np.ndarray): 1D NumPy array.
+    context (np.ndarray): 2D NumPy array.
+    direction (int): The axis along which to calculate the weighted average.
 
     Returns:
-    float: The weighted average of the array.
+    np.ndarray: The weighted average along the specified axis.
     """
-    n = arr.size
-    weights = np.arange(1, n + 1)
-    weighted_sum = np.sum(arr * weights)
+    if context.ndim != 2:
+        raise ValueError("The input array must be 2D.")
+
+    if direction not in (0, 1):
+        raise ValueError("Direction must be 0 or 1.")
+
+    size = context.shape[direction]
+    weights = np.arange(1, size + 1)
+    weighted_sum = np.sum(context * weights, axis=direction)
     total_weight = np.sum(weights)
     return weighted_sum / total_weight

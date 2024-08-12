@@ -18,6 +18,9 @@ from .RollingProduct import RollingProduct
 from .RollingQuotient import RollingQuotient
 from .WeightedAverage import WeightedAverage
 from .Integral import Integral
+from .EigenvalueEigenvector import EigenvalueEigenvector
+from .KLEigenvector import KLEigenvector
+from .LeastSquare import LeastSquare
 
 __all__ = [
     Add,
@@ -39,5 +42,8 @@ __all__ = [
     RollingDifference,
     RollingQuotient,
     RollingProduct,
-    WeightedAverage
+    WeightedAverage,
+    EigenvalueEigenvector,
+    KLEigenvector,
+    LeastSquare
 ]
