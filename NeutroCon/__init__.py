@@ -16,7 +16,6 @@ from .RollingDifference import RollingDifference
 from .RollingSum import RollingSum
 from .RollingProduct import RollingProduct
 from .RollingQuotient import RollingQuotient
-from .WeightedAverage import WeightedAverage
 from .Integral import Integral
 from .EigenvalueEigenvector import EigenvalueEigenvector
 from .KLEigenvector import KLEigenvector
@@ -24,6 +23,9 @@ from .LeastSquare import LeastSquare
 from .GaussElimination import GaussElimination
 from .LowPassFilter import LowPassFilter
 from .MinmaxNormalize import MinmaxNormalize
+from .MinimaxClustering import MinimaxClustering
+from .KMeansClustering import KMeansClustering
+from .NeymanPearsonClustering import NeymanPearsonClustering
 
 __all__ = [
     Add,
@@ -45,11 +47,13 @@ __all__ = [
     RollingDifference,
     RollingQuotient,
     RollingProduct,
-    WeightedAverage,
     EigenvalueEigenvector,
     KLEigenvector,
     LeastSquare,
     GaussElimination,
     LowPassFilter,
     MinmaxNormalize,
+    MinimaxClustering,
+    KMeansClustering,
+    NeymanPearsonClustering
 ]

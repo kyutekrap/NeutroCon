@@ -24,8 +24,8 @@ class ColumnIndex(IntEnum):
 @register_flow(Debug=False)
 def example_flow():
     CreateFlow([
-        CreateStep.Add(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
-        Debugger.log(GetStep("Add")),
+        # CreateStep.Add(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
+        # Debugger.log(GetStep("Add")),
         # CreateStep.Divide(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
         # Debugger.log(GetStep("Divide")),
         # CreateStep.Multiply(context[:, [ColumnIndex.FIRST, ColumnIndex.SECOND]], direction=0),
@@ -76,6 +76,12 @@ def example_flow():
         # Debugger.log(GetStep("LowPassFilter")),
         # CreateStep.MinmaxNormalize(context, direction=0),
         # Debugger.log(GetStep("MinmaxNormalize")),
+        # CreateStep.MinimaxClustering(context, 3),
+        # Debugger.log(GetStep("MinimaxClustering")),
+        # CreateStep.KMeansClustering(context, 3),
+        # Debugger.log(GetStep("KMeansClustering")),
+        # CreateStep.NeymanPearsonClustering(context, 3, 0.5),
+        # Debugger.log(GetStep("NeymanPearsonClustering"))
     ])
 
 
