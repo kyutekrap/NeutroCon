@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='NeutroCon',
-    version='0.0.6',
+    version='0.0.7',
     packages=['NeutroCon'],
     url='https://github.com/kyutekrap/NeutroCon',
     install_requires=[

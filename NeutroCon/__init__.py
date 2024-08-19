@@ -26,6 +26,7 @@ from .MinmaxNormalize import MinmaxNormalize
 from .MinimaxClustering import MinimaxClustering
 from .KMeansClustering import KMeansClustering
 from .NeymanPearsonClustering import NeymanPearsonClustering
+from .Partition import Partition
 
 __all__ = [
     Add,
@@ -55,5 +56,6 @@ __all__ = [
     MinmaxNormalize,
     MinimaxClustering,
     KMeansClustering,
-    NeymanPearsonClustering
+    NeymanPearsonClustering,
+    Partition
 ]

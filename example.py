@@ -81,7 +81,9 @@ def example_flow():
         # CreateStep.KMeansClustering(context, 3),
         # Debugger.log(GetStep("KMeansClustering")),
         # CreateStep.NeymanPearsonClustering(context, 3, 0.5),
-        # Debugger.log(GetStep("NeymanPearsonClustering"))
+        # Debugger.log(GetStep("NeymanPearsonClustering")),
+        # CreateStep.Partition(context, GetStep("MinimaxClustering")[1]),
+        # Debugger.log(GetStep("Partition"))
     ])
 
 
