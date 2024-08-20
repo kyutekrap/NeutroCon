@@ -27,6 +27,7 @@ from .MinimaxClustering import MinimaxClustering
 from .KMeansClustering import KMeansClustering
 from .NeymanPearsonClustering import NeymanPearsonClustering
 from .Partition import Partition
+from .Project import Project
 
 __all__ = [
     Add,
@@ -57,5 +58,6 @@ __all__ = [
     MinimaxClustering,
     KMeansClustering,
     NeymanPearsonClustering,
-    Partition
+    Partition,
+    Project
 ]

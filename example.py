@@ -76,14 +76,16 @@ def example_flow():
         # Debugger.log(GetStep("LowPassFilter")),
         # CreateStep.MinmaxNormalize(context, direction=0),
         # Debugger.log(GetStep("MinmaxNormalize")),
-        # CreateStep.MinimaxClustering(context, 3),
-        # Debugger.log(GetStep("MinimaxClustering")),
         # CreateStep.KMeansClustering(context, 3),
         # Debugger.log(GetStep("KMeansClustering")),
-        # CreateStep.NeymanPearsonClustering(context, 3, 0.5),
+        # CreateStep.NeymanPearsonClustering(context[:, ColumnIndex.FIRST], 3, 0.5),
         # Debugger.log(GetStep("NeymanPearsonClustering")),
+        # CreateStep.MinimaxClustering(context, 2),
+        # Debugger.log(GetStep("MinimaxClustering")),
         # CreateStep.Partition(context, GetStep("MinimaxClustering")[1]),
-        # Debugger.log(GetStep("Partition"))
+        # Debugger.log(GetStep("Partition")),
+        # CreateStep.Project(context, context[:, ColumnIndex.FIRST]),
+        # Debugger.log(GetStep("Project"))
     ])
 
 
